@@ -14,11 +14,11 @@ club varchar2(30));
 ----------------------------------
 <시퀸스 생성>
 create sequence stu_seq
-start with 10101
-increment by 1
-maxvalue 10130
-minvalue 10101
-nocycle;
+start with 10101 (시작 번호)
+increment by 1 (증가값)
+maxvalue 10130 (최대값)
+minvalue 10101 (최소값)
+nocycle; (싸이클 X)
 ----------------------------------
 <데이터 추가>
 insert into student_tbl_01 values
