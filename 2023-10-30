@@ -1,0 +1,50 @@
+<테이블 생성>
+create table student_tbl_01 (
+stu_id number(5) primary key,
+stu_name varchar2(20),
+gender varchar2(5),
+phone varchar2(20),
+t_id number(3));
+
+create table teacher_tbl_01 (
+t_id number(3) primary key,
+t_name varchar2(20),
+subject varchar2(50),
+club varchar2(30));
+----------------------------------
+<시퀸스 생성>
+create sequence stu_seq
+start with 10101
+increment by 1
+maxvalue 10130
+minvalue 10101
+nocycle;
+----------------------------------
+<데이터 추가>
+insert into student_tbl_01 values
+(stu_seq.nextval, '권창욱','남','010-7777-2222',3);
+
+insert into student_tbl_01 values
+(stu_seq.nextval, '염주희','여','010-6666-3333',2);
+
+insert into student_tbl_01 values
+(stu_seq.nextval, '정아영','여','010-5555-4444',1);
+
+insert into student_tbl_01 values
+(stu_seq.nextval, '김민준','남','010-4444-5555',1);
+
+insert into student_tbl_01 values
+(stu_seq.nextval, '김현빈','남','010-3333-6666',2);
+
+insert into student_tbl_01 values
+(stu_seq.nextval, '김현수','남','010-2222-7777',3);
+
+insert into teacher_tbl_01 values
+('1', '오현아','알고리즘','자바 프로그래밍');
+
+insert into teacher_tbl_01 values
+('2', '최승남','자료구조','응용 프로그래밍');
+
+insert into teacher_tbl_01 values
+('3', '최지선','논리회로','로봇 프로그래밍');
+----------------------------------
