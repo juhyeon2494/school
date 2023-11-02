@@ -1,0 +1,46 @@
+create table emp_tbl_02(
+emp_id number(6) primary key,
+emp_name varchar2(10),
+position char(2),
+salary number(10),
+rr_num varchar2(14),
+dept_id number(4));
+
+create sequence emp_seq
+start with 1
+increment by 1
+minvalue 1
+maxvalue 100
+nocycle;
+
+insert into emp_tbl_02 values
+(emp_seq.nextval,'홍길동','P','150000','791231-1578915','10');
+insert into emp_tbl_02 values
+(emp_seq.nextval,'장발장','H','100000','971011-1487351','20');
+insert into emp_tbl_02 values
+(emp_seq.nextval,'이공주','H','100000','990219-2487315','30');
+insert into emp_tbl_02 values
+(emp_seq.nextval,'손오공','D','75000','010517-3487415','20');
+insert into emp_tbl_02 values
+(emp_seq.nextval,'김미녀','E','70000','020116-4154217','30');
+
+create table dept_tbl_02(
+dept_id number(4) primary key,
+dept_name varchar2(20),
+floor number(2),
+location varchar2(10));
+
+insert into dept_tbl_02 values
+('10','인사','7','서울');
+insert into dept_tbl_02 values
+('20','경리','5','서울');
+insert into dept_tbl_02 values
+('30','영업','12','성남');
+insert into dept_tbl_02 values
+('40','기획','15','성남');
+
+select emp_id 사원번호, emp_name 사원이름, 
+	decode(position,'P ','대표이사','H ','부장','D ','대리','사원') 직책,
+	salary 급여, substr(rr_num,8,1) 성별코드, dept_name 부서이름, location 부서위치
+from emp_tbl_02 em, dept_tbl_02 de
+where em.dept_id = de.dept_id;
