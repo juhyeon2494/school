@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	table, th, td{border: 1px solid black}
+
+</style>
+</head>
+<body>
+<form action="#">
+	<table>
+		<tr>
+			<th>예약번호</th>
+			<td><input type="text" name="예약번호">예)2021</td>
+		</tr>
+		<tr>
+			<th>주민번호</th>
+			<td><input type="text" name="주민번호">예)790101-1111111</td>
+		</tr>
+		<tr>
+			<th>백신코드</th>
+			<td>
+            	<select name="백신코드" id="lang">
+                	<option>백신종류</option>
+                	<option>v001</option>
+                	<option>v002</option>
+                	<option>v003</option>
+            	</select>
+            	예)V001, V002, V003
+        	</td>
+		<tr>
+			<th>병원코드</th>
+			<td>
+			<input type="radio" name="병원코드">가_병원
+			<input type="radio" name="병원코드">나_병원
+			<input type="radio" name="병원코드">다_병원
+			<input type="radio" name="병원코드">라_병원
+			예)H001, H002, H003, H004
+			</td>
+		</tr>
+		<tr>
+			<th>병원코드</th>
+			<td>
+			<input type="checkbox" name="병원코드">가_병원
+			<input type="checkbox" name="병원코드">나_병원
+			<input type="checkbox" name="병원코드">다_병원
+			<input type="checkbox" name="병원코드">라_병원
+			예)H001, H002, H003, H004
+			</td>
+		</tr>
+		<tr>
+		<th>예약날짜</th>
+			<td><input type="text" name="예약날짜">예)20210101</td>
+		</tr>
+		
+		<tr>
+		<th>예약시간</th>
+			<td><input type="text" name="예약시간">예)0930, 1130</td>
+		</tr>
+		<tr>
+        	<th colspan='2'>
+            	<input type="submit" value="등록"><input type="reset" value="취소"></input>
+        	</th>
+    	</tr>
+	</table>
+</form>
+</body>
+</html>
